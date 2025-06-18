@@ -157,17 +157,24 @@ display(ui)
 
 import streamlit as st
 
-st.set_page_config(page_title="Cover Deflection", layout="centered")
-
 st.title("Steel Cover Deflection Calculator")
 
 cover_type = st.selectbox("Cover Type", ["rectangular", "square", "circular"])
 cover_width = st.number_input("Cover Width (mm)", value=300)
 cover_length = st.number_input("Cover Length (mm)", value=300)
 support = st.number_input("Support Area per Side (mm)", value=10)
+thickness = st.slider("Thickness (mm)", 5, 100, 20)
+youngs_modulus = st.number_input("Young's Modulus (GPa)", value=200.0)
+poisson = st.slider("Poisson's Ratio", 0.2, 0.35, 0.3)
+rib_height = st.slider("Rib Height (mm)", 5, 100, 30)
+rib_thickness = st.slider("Rib Thickness (mm)", 2, 30, 10)
+num_ribs = st.slider("Number of Ribs", 1, 10, 4)
+load_class = st.selectbox("Load Class", ["A15", "B125", "C250", "D400", "E600", "F900"])
 
-st.write(f"Cover type: {cover_type}")
-st.write(f"Cover width: {cover_width} mm")
-st.write(f"Cover length: {cover_length} mm")
-st.write(f"Support area: {support} mm")
+# ✅ Submit button
+if st.button("Calculate Deflection"):
+    st.success("Calculation started...")
 
+    # Sample dummy output (replace with your actual function)
+    st.write(f"Cover Type: {cover_type}")
+    st.write(f"Calculated Deflection: 0.89 mm")  # Replace with real value
