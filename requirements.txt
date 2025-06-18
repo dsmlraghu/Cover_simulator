@@ -4,3 +4,4 @@ ipywidgets
 numpy
 plotly
 pandas
+pip install streamlit matplotlib numpy
