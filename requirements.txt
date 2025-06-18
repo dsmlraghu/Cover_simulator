@@ -1,7 +1,8 @@
 streamlit
+pip install streamlit matplotlib numpy
 matplotlib
 ipywidgets
 numpy
 plotly
 pandas
-pip install streamlit matplotlib numpy
+
