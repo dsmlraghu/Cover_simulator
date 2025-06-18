@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1YMfomHE9z2-FgpnnZTZT8HoIULcGmi7a
 """
 
-pip install ipywidgets matplotlib
+#pip install ipywidgets matplotlib
 
 import numpy as np
 import matplotlib.pyplot as plt
