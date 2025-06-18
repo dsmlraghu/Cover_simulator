@@ -154,3 +154,20 @@ ui = widgets.VBox([
 ])
 
 display(ui)
+
+import streamlit as st
+
+st.set_page_config(page_title="Cover Deflection", layout="centered")
+
+st.title("Steel Cover Deflection Calculator")
+
+cover_type = st.selectbox("Cover Type", ["rectangular", "square", "circular"])
+cover_width = st.number_input("Cover Width (mm)", value=300)
+cover_length = st.number_input("Cover Length (mm)", value=300)
+support = st.number_input("Support Area per Side (mm)", value=10)
+
+st.write(f"Cover type: {cover_type}")
+st.write(f"Cover width: {cover_width} mm")
+st.write(f"Cover length: {cover_length} mm")
+st.write(f"Support area: {support} mm")
+
